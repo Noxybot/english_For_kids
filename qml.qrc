@@ -2,10 +2,19 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>main.qml</file>
-        <file>qtquickcontrols2.conf</file>
         <file>images/background.jpg</file>
         <file>main.cpp</file>
-        <file>Page1Form.ui.qml</file>
-        <file>Page2Form.ui.qml</file>
+        <file>LessonsAndTestsPage.qml</file>
+        <file>MainPage.qml</file>
+        <file>MyButton.qml</file>
+        <file>MyHeaderText.qml</file>
+        <file>LessonPage.qml</file>
+        <file>LessonContent.qml</file>
+        <file>images/apple.png</file>
+        <file>images/play_button.png</file>
+        <file>images/cheese.png</file>
+        <file>images/elephant.png</file>
+        <file>images/pig.png</file>
+        <file>images/turtle.png</file>
     </qresource>
 </RCC>
