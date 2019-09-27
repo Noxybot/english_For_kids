@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>images/background.jpg</file>
+        <file>main.cpp</file>
+        <file>Page1Form.ui.qml</file>
+        <file>Page2Form.ui.qml</file>
+    </qresource>
+</RCC>
