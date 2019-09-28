@@ -1,12 +1,14 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.4
 import QtGraphicalEffects 1.0
+import QtQuick.Layouts 1.11
 Page {
-    anchors.fill: parent
+    //anchors.fill: parent
     id: lessoncont
+   // z: -1
     background: Rectangle {
         anchors.fill: parent
-        color: lessonsViewID.currentItem.back_color
+        //color: lessonsViewID.currentItem.back_color
     }
     header: ToolBar {
         contentHeight: toolButton.implicitHeight
@@ -38,19 +40,17 @@ Page {
             color: "#6e608b"
         }
         background: Rectangle {
+            id:test
+
             anchors.fill: parent
             color: "white"
             border.width: 1
             border.color: "#ce93d8"
         }
     }
-    Item {
-        anchors.fill: parent
         SwipeView {
             anchors.fill: parent
             id: lessonsViewID
-
-
                 Repeater {
                     model: ListModel {
                         ListElement {top_text1: "Aa"; back_color1: "#fccdd2";
@@ -71,7 +71,6 @@ Page {
 
                     }
                     LessonContent{
-                        anchors.fill: lessoncont
                         top_text: top_text1
                         back_color:  back_color1
                         bot_text:  bot_text1
@@ -82,32 +81,25 @@ Page {
 
 
         }
-    }
-
-    footer: Item {
-        width: root.width
-        height: root.height / 6
         PageIndicator {
+
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 40
             id: pageIndicator1
             interactive: true
             count: lessonsViewID.count
             currentIndex: lessonsViewID.currentIndex
-            //anchors.bottom: parent.bottom
-          //  anchors.horizontalCenter: parent.horizontalCenter
-            anchors.centerIn: parent
             delegate: Rectangle {
+                border {color: "grey"; width: 1}
                 implicitWidth: 15
                 implicitHeight: 15
                 radius: width
-                color: "#eceff1"
-                border.width: 1
-                border.color: "#cfd8dc"
+                color: "white"
                 opacity: index === pageIndicator1.currentIndex ? 1 : pressed ? 1 : 0.5
-
             }
 
         }
-    }
 
 }
 

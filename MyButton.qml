@@ -3,6 +3,10 @@ import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.11
 
 RoundButton {
+    onPressed: background.color = "grey"
+   // onReleased: { background.color = "white"; console.log("released")}
+   // onToggled: background.color = "white"
+    onCanceled: background.color = "white"
     highlighted: true
     Layout.preferredHeight: 70
     Layout.preferredWidth: 170

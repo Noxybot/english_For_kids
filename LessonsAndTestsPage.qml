@@ -5,40 +5,33 @@ import QtQuick.Layouts 1.11
 import QtQuick 2.11
 Page {
     id: lesAndTestID
-    anchors.fill: parent
     background: backID
     header: Item {
-        width: root.width
-        height: root.height / 5
+        width: parent.width
+        height: parent.height / 5
         MyHeaderText {text: "Уроки"}
     }
-     Item {
-         id: lessAndTestID
-         anchors.fill: parent
-        SwipeView {
-            id: lessAndTestViewID
-            anchors.fill: parent
-                Repeater {
-                    //id: mainq
-                    model:  10
-                GridLayout {
-                    anchors.fill: lessAndTestID
-                    columns: 2
-                    //spacing: -100
-                    Repeater {
-                        model: [1, 1, 2, 2, 3, 3, 4, 4]
 
-                        MyButton {text: ((index + 1) % 2 ? qsTr("Урок ") : qsTr("Тест ")) + modelData;
-                                onClicked: mainStackViewid.push(Qt.createComponent("LessonPage.qml"))
-                        }
+    SwipeView {
+        id: lessAndTestViewID
+        anchors.fill: parent
+            Repeater {
+                model:  10
+            GridLayout {
+                columns: 2
+                //spacing: -100
+                Repeater {
+                    model: [1, 1, 2, 2, 3, 3, 4, 4]
+                    MyButton {text: ((index + 1) % 2 ? qsTr("Урок ") : qsTr("Тест ")) + modelData;
+                            onClicked: mainStackViewid.push(Qt.createComponent("LessonPage.qml"))
                     }
                 }
+            }
 
             }
 
         }
 
-     }
     footer: Item {
         width: root.width
         height: root.height / 6
@@ -56,7 +49,6 @@ Page {
                 radius: width
                 color: "white"
                 opacity: index === pageIndicator.currentIndex ? 1 : pressed ? 1 : 0.5
-
                 Behavior on opacity {
                     OpacityAnimator {
                         duration: 100

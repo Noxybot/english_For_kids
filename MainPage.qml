@@ -4,21 +4,20 @@ import QtQuick.Layouts 1.11
 
 Page {
     id: mainId
-    anchors.fill: parent
     background: Image {
         id: backID
         source: "images/background.jpg"
     }
     header: Item {
-        width: root.width
-        height: root.height / 2
+        width: parent.width
+        height: parent.height / 2
         MyHeaderText {text: "Easy\nEnglish"}
 
     }
 
     footer:  Item {
-        width: root.width
-        height: root.height / 2
+        width: parent.width
+        height: parent.height / 2
         ColumnLayout {
             anchors.fill: parent
             spacing: -100

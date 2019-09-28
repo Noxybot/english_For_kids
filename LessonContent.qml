@@ -50,9 +50,13 @@ ColumnLayout{
             icon.source: "images/play_button.png"
             icon.width: 24
             icon.height: 23
+            Layout.topMargin: 5
         }
 
     }
 }
+footer: Item { width: root.width
+     height: root.height / 6}
 
 }
+
