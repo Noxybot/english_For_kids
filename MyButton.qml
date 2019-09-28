@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.11
 
 RoundButton {
     onPressed: background.color = "grey"
-   // onReleased: { background.color = "white"; console.log("released")}
+    onReleased: { background.color = "white"; console.log("released")}
    // onToggled: background.color = "white"
     onCanceled: background.color = "white"
     highlighted: true
@@ -30,11 +30,5 @@ RoundButton {
 
 
         }
-  // onClicked: {
-  //     if (index == 1)
-   //        Qt.quit();
-   //    else
-  //         mainStackViewid.push(Qt.createComponent("LessonsAndTestsPage.qml"))
-  // }
 
 }
