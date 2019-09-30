@@ -16,5 +16,13 @@
         <file>images/elephant.png</file>
         <file>images/pig.png</file>
         <file>images/turtle.png</file>
+        <file>audio/cheese.mp3</file>
+        <file>audio/turtle.mp3</file>
+        <file>TestPageImgChoose.qml</file>
+        <file>TestPageImgEnter.qml</file>
+        <file>TestPageAudioChoose.qml</file>
+        <file>MyHeaderToolBar.qml</file>
+        <file>TestPage.qml</file>
+        <file>MyPlayButton.qml</file>
     </qresource>
 </RCC>

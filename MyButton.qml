@@ -3,6 +3,7 @@ import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.11
 
 RoundButton {
+    property alias textSize: itemID.font.pixelSize
     onPressed: background.color = "grey"
     onReleased: { background.color = "white"; console.log("released")}
    // onToggled: background.color = "white"
@@ -13,6 +14,7 @@ RoundButton {
     Layout.alignment:  Qt.AlignHCenter
     radius: 7
     contentItem: Text {
+        id: itemID
         text: parent.text
         color: "#6e608b"
         font.pixelSize: 30

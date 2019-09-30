@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.11
+import QtMultimedia 5.11
 
 Page {
     property alias top_text: topTexID.text
@@ -8,11 +9,18 @@ Page {
     property alias text_color: topTexID.color
     property alias img_source: lessonImageID.source
     property alias  back_color: back.color
+    property alias  audio_source: audioID.source
 
     background: Rectangle {
         id: back
         anchors.fill: parent
     }
+    Audio {
+        id: audioID
+        autoLoad: true
+        onPlaying: {console.log("playing")}
+    }
+
 
 ColumnLayout{
     anchors.fill: parent
@@ -39,19 +47,7 @@ ColumnLayout{
             font.pixelSize: 36
             color: topTexID.color
         }
-        Button {
-            background: Rectangle {
-                anchors.fill: parent
-                color: "transparent"
-            }
-
-            width: icon.width
-            height: icon.height
-            icon.source: "images/play_button.png"
-            icon.width: 24
-            icon.height: 23
-            Layout.topMargin: 5
-        }
+           MyPlayButton {}
 
     }
 }

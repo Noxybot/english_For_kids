@@ -1,2 +1,6 @@
 English_for_kids.pro.user
 msvc_make.bat
+.qmake.stash
+English_for_kids.pro.user.4.10-pre1
+english_for_kids_plugin_import.cpp
+english_for_kids_qml_plugin_import.cpp

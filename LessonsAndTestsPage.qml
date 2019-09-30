@@ -23,7 +23,8 @@ Page {
                 Repeater {
                     model: [1, 1, 2, 2, 3, 3, 4, 4]
                     MyButton {text: ((index + 1) % 2 ? qsTr("Урок ") : qsTr("Тест ")) + modelData;
-                            onClicked: mainStackViewid.push(Qt.createComponent("LessonPage.qml"))
+                            onClicked: mainStackViewid.push(Qt.createComponent("TestPage.qml"))
+                            //Qt.createComponent("LessonPage.qml")
                     }
                 }
             }

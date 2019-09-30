@@ -3,55 +3,12 @@ import QtQuick.Controls 2.4
 import QtGraphicalEffects 1.0
 import QtQuick.Layouts 1.11
 Page {
-    //anchors.fill: parent
     id: lessoncont
-   // z: -1
     background: Rectangle {
         anchors.fill: parent
         //color: lessonsViewID.currentItem.back_color
     }
-    header: ToolBar {
-        contentHeight: toolButton.implicitHeight
-
-        ToolButton {
-            background: Rectangle {
-                anchors.fill: parent
-                color: "transparent"
-
-            }
-            onClicked: mainStackViewid.pop()
-            onPressed: {background.color = "grey"}
-            onCanceled: background.color = "transparent"
-            id: toolButton
-            contentItem: Text {
-                text: qsTr("\u2b9c")
-                color: "#6e608b"
-                font.pixelSize: 30
-                font.family: "helvetica"
-                font.bold: true
-
-            }
-           // onClicked: {console.log("hey")}
-
-        }
-        Text {
-           // id: name
-            text: qsTr("Урок 1")
-            anchors.centerIn: parent
-            font.pixelSize: 30
-            font.bold: true
-            font.family: "helvetica"
-            color: "#6e608b"
-        }
-        background: Rectangle {
-            id:test
-
-            anchors.fill: parent
-            color: "white"
-            border.width: 1
-            border.color: "#ce93d8"
-        }
-    }
+    header: MyHeaderToolBar {text: "Урок 1"}
         SwipeView {
             anchors.fill: parent
             id: lessonsViewID
@@ -80,6 +37,7 @@ Page {
                         bot_text:  bot_text1
                         text_color: text_color1
                         img_source: img_source1
+                        audio_source: "audio/turtle.mp3"
                     }
                 }
 
