@@ -16,6 +16,7 @@ Page {
         anchors.fill: parent
     }
     Audio {
+        //onPlaying:  {}
         id: audioID
         autoLoad: true
         onPlaying: {console.log("playing")}
@@ -47,7 +48,7 @@ ColumnLayout{
             font.pixelSize: 36
             color: topTexID.color
         }
-           MyPlayButton {}
+           MyPlayButton {onClicked: audioID.play()}
 
     }
 }

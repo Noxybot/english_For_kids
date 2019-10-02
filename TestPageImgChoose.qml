@@ -9,8 +9,6 @@ Page {
     property alias firstWrd: firstButt.text
     property alias secondWrd: secondButt.text
     property alias firstButID: firstButt
-    property alias secondButID: secondButt
-
     background: Rectangle {
         id: back
         anchors.fill: parent

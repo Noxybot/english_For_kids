@@ -15,19 +15,19 @@ Page {
                 Repeater {
                     model: ListModel {
                         ListElement {top_text1: "Aa"; back_color1: "#fccdd2";
-                            bot_text1: "apple"; text_color1:"#f64c4c";
+                            bot_text1: "apple"; text_color1:"#f64c4c"; audio_source1: "audio/cheese.mp3"
                             img_source1: "images/apple.png"}
                         ListElement {top_text1: "Cc"; back_color1: "#f9a636";
-                            bot_text1: "cheese"; text_color1:"#f68a1f";
+                            bot_text1: "cheese"; text_color1:"#f68a1f"; audio_source1: "audio/cheese.mp3"
                             img_source1: "images/cheese.png"}
                         ListElement {top_text1: "Ee"; back_color1: "#f5f5f5";
-                            bot_text1: "elephant"; text_color1:"#455a64";
+                            bot_text1: "elephant"; text_color1:"#455a64"; audio_source1: "audio/elephant.mp3"
                             img_source1: "images/elephant.png"}
                         ListElement {top_text1: "Pp"; back_color1: "#ffebf1";
-                            bot_text1: "pig"; text_color1:"#ea6bb1";
+                            bot_text1: "pig"; text_color1:"#ea6bb1"; audio_source1: "audio/pig.mp3"
                             img_source1: "images/pig.png"}
                         ListElement {top_text1: "Tt"; back_color1: "#d3f3c2";
-                            bot_text1: "turtle"; text_color1:"#62c73f";
+                            bot_text1: "turtle"; text_color1:"#62c73f"; audio_source1: "audio/turtle.mp3"
                             img_source1: "images/turtle.png"}
 
                     }
@@ -37,7 +37,7 @@ Page {
                         bot_text:  bot_text1
                         text_color: text_color1
                         img_source: img_source1
-                        audio_source: "audio/turtle.mp3"
+                        audio_source: audio_source1
                     }
                 }
 

@@ -14,7 +14,7 @@ Button {
     icon.width: 24
     icon.height: 23
     Layout.topMargin: 5
-    onClicked: {audioID.play(); console.log(audioID.playing()); }
+
 
 
 }

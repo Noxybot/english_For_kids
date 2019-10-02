@@ -4,3 +4,7 @@ msvc_make.bat
 English_for_kids.pro.user.4.10-pre1
 english_for_kids_plugin_import.cpp
 english_for_kids_qml_plugin_import.cpp
+Makefile
+Makefile.Debug
+Makefile.Release
+release/

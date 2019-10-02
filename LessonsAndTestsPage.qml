@@ -22,8 +22,11 @@ Page {
                 //spacing: -100
                 Repeater {
                     model: [1, 1, 2, 2, 3, 3, 4, 4]
-                    MyButton {text: ((index + 1) % 2 ? qsTr("Урок ") : qsTr("Тест ")) + modelData;
-                            onClicked: mainStackViewid.push(Qt.createComponent("TestPage.qml"))
+                    MyButton {text: ((index + 1) % 2 ? "Урок " : "Тест ") + modelData;
+                            onClicked: {if (text == "Урок " + modelData)
+                                    mainStackViewid.push(Qt.createComponent("LessonPage.qml"))
+                                        else
+                                    mainStackViewid.push(Qt.createComponent("TestPage.qml"))}
                             //Qt.createComponent("LessonPage.qml")
                     }
                 }
