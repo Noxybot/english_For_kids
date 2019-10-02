@@ -58,9 +58,8 @@ Page {
                                shittyTimerID.start()
                                 console.log("RIGHT")
                             }
-
-
-
+                            else if (letters[0] !== "" && letters[1] !== ""&& letters[2] !== "")
+                                wrongDioID.open();
                         }
                         verticalAlignment: Text.AlignVCenter
                         maximumLength: 1
