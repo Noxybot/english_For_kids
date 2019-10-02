@@ -12,9 +12,16 @@ ToolBar {
                 color: "transparent"
 
             }
+            MouseArea {
+               onClicked: toolButton.clicked()
+               anchors.fill: parent
+               id: areaID
+
+           }
+            onHoveredChanged: {areaID.cursorShape = Qt.PointingHandCursor}
             onClicked: mainStackViewid.pop()
-            onPressed: {background.color = "grey"}
-            onCanceled: background.color = "transparent"
+            //onPressed: {background.color = "grey"}
+           // onCanceled: background.color = "transparent"
             id: toolButton
             contentItem: Text {
                 text: qsTr("\u2b9c")

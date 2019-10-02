@@ -10,9 +10,10 @@ Page {
     property alias img_source: lessonImageID.source
     property alias  back_color: back.color
     property alias  audio_source: audioID.source
-
+    property alias back_opacity: back.opacity
     background: Rectangle {
         id: back
+        //opacity: 0
         anchors.fill: parent
     }
     Audio {

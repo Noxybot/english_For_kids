@@ -15,9 +15,9 @@ Page {
                 Repeater {
                     model: ListModel {
                         ListElement {top_text1: "Aa"; back_color1: "#fccdd2";
-                            bot_text1: "apple"; text_color1:"#f64c4c"; audio_source1: "audio/cheese.mp3"
+                            bot_text1: "apple"; text_color1:"#f64c4c"; audio_source1: "audio/apple.mp3"
                             img_source1: "images/apple.png"}
-                        ListElement {top_text1: "Cc"; back_color1: "#f9a636";
+                        ListElement {top_text1: "Cc"; back_color1: "#fef8a0";
                             bot_text1: "cheese"; text_color1:"#f68a1f"; audio_source1: "audio/cheese.mp3"
                             img_source1: "images/cheese.png"}
                         ListElement {top_text1: "Ee"; back_color1: "#f5f5f5";

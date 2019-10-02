@@ -4,9 +4,11 @@ import QtQuick.Layouts 1.11
 import QtMultimedia 5.11
 
 Page {
-
+    property string rightWord
     property alias  back_color: back.color
     property alias audioSrc: someShittyAudioID.source
+    property int textSize1: 30
+    property int prefHeight1: 40
     property var words
     Audio {
         id: someShittyAudioID
@@ -41,10 +43,21 @@ Page {
                 }
         }
         Repeater {
+            id: someShittyID
             model: words
-            MyButton { text: modelData; textSize: 20; id: firstButt;  Layout.preferredHeight: 40}
 
-        }
+            MyButton {onClicked:{
+                    if (text != rightWord)
+                        wrongDioID.open();
+                    else {
+                        background.color = "green"
+                        background.opacity = 0.7
+                        myTimerID.start()
+                    }
+                         }
+                text: modelData; textSize: textSize1;
+                prefHeight: prefHeight1}
+            }
 
     }
     footer: Item {

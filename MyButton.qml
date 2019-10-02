@@ -3,16 +3,24 @@ import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.11
 
 RoundButton {
+    property int prefWidth: 170
+    property int prefHeight: 70
+    MouseArea {
+       onClicked: parent.clicked()
+       anchors.fill: parent
+       id: areaID
+
+   }
+    //down: areaID.pressed
+    onHoveredChanged: {areaID.cursorShape = Qt.PointingHandCursor}
     property alias textSize: itemID.font.pixelSize
-    onPressed: background.color = "grey"
-    onReleased: { background.color = "white"; console.log("released")}
-   // onToggled: background.color = "white"
-    onCanceled: background.color = "white"
+
     highlighted: true
-    Layout.preferredHeight: 70
-    Layout.preferredWidth: 170
+    Layout.preferredHeight: prefHeight
+    Layout.preferredWidth: prefWidth
     Layout.alignment:  Qt.AlignHCenter
     radius: 7
+    //hoverEnabled: true
     contentItem: Text {
         id: itemID
         text: parent.text
@@ -20,9 +28,11 @@ RoundButton {
         font.pixelSize: 30
         font.family: "helvetica"
         font.bold: true
+        anchors.bottomMargin: 10
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
     }
+
    background: Rectangle {
                radius: parent.radius
                height: parent.height
