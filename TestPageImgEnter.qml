@@ -38,6 +38,7 @@ Page {
                 id: shittyID
                 model: 3
                 Rectangle {
+                    property alias hateThis : hateThis1
                     width: 50
                     height: 50
                     radius: 7
@@ -46,6 +47,7 @@ Page {
                     border.width: 3
                     border.color: "#ce93d8"
                     TextInput {
+                        id: hateThis1
                         onTextChanged: {
                             text = text.toUpperCase()
                             letters[modelData] = text
@@ -58,8 +60,14 @@ Page {
                                shittyTimerID.start()
                                 console.log("RIGHT")
                             }
-                            else if (letters[0] !== "" && letters[1] !== ""&& letters[2] !== "")
+                            else if (letters[0] !== "" && letters[1] !== ""&& letters[2] !== "") {
+                                shittyID.itemAt(0).hateThis.text = ""
+                                shittyID.itemAt(1).hateThis.text = ""
+                                shittyID.itemAt(2).hateThis.text = ""
+                                letters[0] = letters[1] = letters[2] = ""
                                 wrongDioID.open();
+                            }
+
                         }
                         verticalAlignment: Text.AlignVCenter
                         maximumLength: 1

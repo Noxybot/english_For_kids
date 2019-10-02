@@ -32,7 +32,6 @@ RoundButton {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
     }
-
    background: Rectangle {
                radius: parent.radius
                height: parent.height
@@ -42,5 +41,4 @@ RoundButton {
 
 
         }
-
 }

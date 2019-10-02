@@ -2,6 +2,9 @@ import QtQuick 2.0
 import QtQuick.Controls 2.4
 
 ToolBar {
+    BackToMenyDio {id: shittyDioID}
+
+    property bool callDio: false
 
         property alias text: mainText.text
         contentHeight: toolButton.implicitHeight
@@ -19,7 +22,12 @@ ToolBar {
 
            }
             onHoveredChanged: {areaID.cursorShape = Qt.PointingHandCursor}
-            onClicked: mainStackViewid.pop()
+            onClicked: {
+                if(callDio === true) {
+                    shittyDioID.open()
+                }
+                else
+                    mainStackViewid.pop()}
             //onPressed: {background.color = "grey"}
            // onCanceled: background.color = "transparent"
             id: toolButton

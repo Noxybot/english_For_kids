@@ -4,10 +4,11 @@ import QtQuick.Controls 2.4
 import QtQml 2.11
 
 Page {
-    header: MyHeaderToolBar {text: "Тест 1"}
+    header: MyHeaderToolBar {text: "Тест 1"; callDio: true}
 
 
     SwipeView {
+
         Timer {
             id: myTimerID
             repeat: false

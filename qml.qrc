@@ -28,5 +28,6 @@
         <file>audio/elephant.mp3</file>
         <file>audio/apple.mp3</file>
         <file>WrongDialog.qml</file>
+        <file>BackToMenyDio.qml</file>
     </qresource>
 </RCC>
