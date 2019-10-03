@@ -18,7 +18,7 @@ Page {
             id: name
             text: "Введите слово.\nОдна буква в одной клетке"
             color: "#6e608b"
-            font.pixelSize: 25
+            font.pixelSize: 28
             font.family: "helvetica"
             font.bold: true
             anchors.bottomMargin: 10
@@ -46,6 +46,7 @@ Page {
                    // opacity: 0.7
                     border.width: 3
                     border.color: "#ce93d8"
+                    property int name: value
                     TextInput {
                         id: hateThis1
                         onTextChanged: {
@@ -58,7 +59,7 @@ Page {
                                     shittyID.itemAt(i).opacity = 0.7;
                                 }
                                shittyTimerID.start()
-                                console.log("RIGHT")
+                               console.log("RIGHT")
                             }
                             else if (letters[0] !== "" && letters[1] !== ""&& letters[2] !== "") {
                                 shittyID.itemAt(0).hateThis.text = ""

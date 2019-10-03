@@ -26,7 +26,7 @@ Page {
                 Layout.alignment: Qt.AlignCenter
                 text: "Нажми на значок\nЧто говорят?"
                 color: "#6e608b"
-                font.pixelSize: 30
+                font.pixelSize: 35
                 font.family: "helvetica"
                 font.bold: true
                 horizontalAlignment: Text.AlignHCenter

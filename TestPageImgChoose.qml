@@ -14,7 +14,21 @@ Page {
         anchors.fill: parent
     }
     ColumnLayout {
+        spacing: 20
         anchors.fill: parent
+        Text {
+            Layout.alignment: Qt.AlignHCenter
+            id: name
+            text: "Что на картинке?"
+            color: "#6e608b"
+            font.pixelSize: 35
+            font.family: "helvetica"
+            font.bold: true
+            anchors.bottomMargin: 10
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+        }
+
 
         Image {
             Layout.alignment: Qt.AlignCenter

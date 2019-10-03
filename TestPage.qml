@@ -8,17 +8,18 @@ Page {
 
 
     SwipeView {
+        interactive: false
 
         Timer {
             id: myTimerID
             repeat: false
-            interval: 2000
+            interval: 1000
             onTriggered: testSwipeViewID.incrementCurrentIndex()
         }
         Timer {
-            id: shittyTimerID
-            interval: 2000
-            onTriggered: mainStackViewid.pop()
+           id: shittyTimerID
+           interval: 1000
+           onTriggered: mainStackViewid.pop()
         }
 
         id: testSwipeViewID
